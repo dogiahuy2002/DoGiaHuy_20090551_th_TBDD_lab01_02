@@ -1,3 +1,5 @@
+
+
 //Coding Challenge #1
 var massM = 78;
 var heightM = 1.69;
@@ -64,5 +66,60 @@ if (avg1 == avg2 && avg1 >= 100) {
 } else {
     if (avg1 < 100 && avg2 < 100)
         console.log('No team wins the trophy');
-
 }
+
+//Coding Challenge #4
+
+var X = [275, 40, 430];
+var tips;
+X.forEach(function(element){
+    if(element>=50 && element<=300){
+        tips = element * 0.15;
+        console.log('The bill is',element, 'the tips was', tips, 'and total value ', element+tips )
+    }
+    else
+    tips = element * 0.2;
+    console.log('The bill is',element, 'the tips was', tips, 'and total value ', element+tips )
+})
+
+//Coding Challenge #5
+var calcAverage = function(array) {
+    let sum = 0;
+    array.forEach(function(element){
+      sum += element;
+    });
+    return sum/array.length
+}  
+var checkWinner = function(avg1, avg2){
+    if ((avg1/2)>=avg2){
+        console.log('Dophins win (',avg1, 'vs.',avg2, ')')
+    }else{
+        if ((avg2/2)>=avg1) {
+            console.log('Koala win (',avg2, 'vs.',avg1, ')')
+        } else {
+            console.log('no team win ')
+        }
+    }
+}
+const Dophins = [85 , 54, 41]
+const Koalas = [23, 34, 27]
+var avg_D = calcAverage(Dophins)
+var avg_K = calcAverage(Koalas)
+console.log(avg_D)
+console.log(avg_K)
+
+var kq = checkWinner(avg_D,avg_K)
+
+//Coding Challenge #7
+let tips
+var calcTip = function(element){
+    if(element>=50 && element<=300){
+        tips = element * 0.15;
+        console.log('The bill is',element, 'the tips was', tips )
+    }
+    else{
+    tips = element * 0.2;
+    console.log('The bill is',element, 'the tips was', tips )
+    }
+}
+let example = calcTip(100);
